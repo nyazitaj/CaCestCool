@@ -5,8 +5,6 @@
 CaCestCool est a web training school project created by [Taj Nyazi](https://estracode.com) using React and NodeJS.
 
 ## CaCestCool
-
-The following are the web technologies used in this projects:
     
 The frontend of this project is created using React framework and some other necessary features of React. Some are listed below :
 - [React](https://fr.reactjs.org/).

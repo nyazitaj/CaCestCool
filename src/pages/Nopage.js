@@ -5,13 +5,13 @@ function App() {
   return (
     <div className="App container">
       <div className="title-row">
-        <h2>CaCestCool</h2>
+        <h1>CaCestCool</h1>
       </div>
-      
+
       <div className="title-row">
         <h2>Page not found</h2>
       </div>
-      
+
     </div>
   );
 }

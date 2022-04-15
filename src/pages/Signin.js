@@ -5,9 +5,13 @@ function App() {
   return (
     <div className="App container">
       <div className="title-row">
-        <h2>CaCestCool</h2>
+        <h1>CaCestCool</h1>
       </div>
       <form id="signin-row">
+        <div className="title-row">
+          <h2>Connexion</h2>
+        </div>
+
         <div className="input-row">
           <input type="text" placeholder="Email" />
         </div>
