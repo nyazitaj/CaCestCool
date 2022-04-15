@@ -5,7 +5,7 @@ function App() {
   return (
     <div className="App container">
       <div className="title-row">
-        <h1>CaCestCool</h1>
+        <img src="./assets/images/CaCestCool.png" alt="CaCestCool"/>
       </div>
 
       <div className="title-row">
