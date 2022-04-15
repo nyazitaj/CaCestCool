@@ -19,7 +19,7 @@ The frontend of this project is created using React framework and some other nec
 
 ## frontend
 
-Creating React application:
+Creating React application (on the PORT 3000):
   - npx create-react-app .
   - npm start
 
@@ -38,15 +38,13 @@ Creating Database with MongoDB:
 
   - use cacestcool
   - db.user.insert({name: "John Doe", age: 30})
-  - db.user.insert({name: "Nyazi Taj", age: 37})
 
   - show dbs
 
   - db.createUser({ user: "foo", pwd: "123", roles: [{ role: "dbOwner", db: "cacestcool" }] })
 
 Installing some necessary packages:
-  - npm install express dotenv cors
-  - npm install mongoose
+  - npm install express dotenv cors mongoose
 
 Connection to MongoDB:
 I created a **.env** file with database information, then created **/backend/app.js** file to create the connection, then:
@@ -55,3 +53,9 @@ Creating a Server on the PORT 3001:
 For this, I created **/backend/server.js**, then ran the server:
   - cd backend/
   - node server.js
+
+In order to restart the server automatically with any changes in the project files are made, I installed **Nodemon**:
+  - cd .. (Comme to the root)
+  - npm install -g nodemon
+  - OR npm install nodemon
+  - nodemon backend/server.js
