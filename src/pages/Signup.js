@@ -2,6 +2,7 @@ import logo from '../logo.svg';
 import '../App.css';
 
 function Signup() {
+
   return (
     <div className="App container">
       <div className="title-row">

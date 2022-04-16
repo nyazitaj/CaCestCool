@@ -55,7 +55,10 @@ For this, I created **/backend/server.js**, then ran the server:
   - node server.js
 
 In order to restart the server automatically with any changes in the project files are made, I installed **Nodemon**:
-  - cd .. (Comme to the root)
   - npm install -g nodemon
   - OR npm install nodemon
-  - nodemon backend/server.js
+  - cd backend
+  - nodemon server.js
+
+Axios
+  - npm install axios
