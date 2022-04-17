@@ -1,19 +1,5 @@
 /* import React from "react"; */
 
-/* const SignupUser = () => {
-    return 'Registered';
-}
-
-const LoginUser = () => {
-    return 'Logged in';
-} */
-
-/* export default { SignupUser, LoginUser }; */
-
-/* export default SignupUser;
-export { LoginUser } */
-
-
 export default class MyFunctions {
 
     constructor() {
@@ -21,9 +7,17 @@ export default class MyFunctions {
     }
 
     SignupUser = () => {
-        return 'Registered';
+        document.querySelector('#signin').addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            const myFormData = new FormData(this);
+
+            for (var value of myFormData.values()) {
+                console.log(value);
+            }
+        });
     }
-    
+
     LoginUser = () => {
         return 'Logged in';
     }

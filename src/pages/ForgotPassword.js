@@ -7,13 +7,13 @@ function App() {
       <div className="title-row">
         <img src="./assets/images/CaCestCool.png" alt="CaCestCool"/>
       </div>
-      <form id="signin-row">
+      <form id="forgot-pass">
         <div className="title-row">
           <h2>Récupération de mot de passe</h2>
         </div>
 
         <div className="input-row">
-          <input type="text" placeholder="Email" />
+          <input type="text" name="email" placeholder="Email" />
         </div>
 
         <div className="button-row">

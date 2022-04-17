@@ -7,17 +7,17 @@ function App() {
       <div className="title-row">
         <img src="./assets/images/CaCestCool.png" alt="CaCestCool"/>
       </div>
-      <form id="signin-row">
+      <form id="signin">
         <div className="title-row">
           <h2>Connexion</h2>
         </div>
 
         <div className="input-row">
-          <input type="text" placeholder="Email" />
+          <input type="text" name="email" placeholder="Email" />
         </div>
 
         <div className="input-row">
-          <input type="password" placeholder="Mot de passe" />
+          <input type="password" name="password" placeholder="Mot de passe" />
         </div>
 
         <div className="button-row">
