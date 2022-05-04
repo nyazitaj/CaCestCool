@@ -6,7 +6,7 @@ CaCestCool est a web training school project created by [Taj Nyazi](https://estr
 
 ## CaCestCool
 
-The frontend of this project is created using React framework and some other necessary features of React. Some are listed below :
+The frontend of this project is created using React framework and some other necessary features of React, while backend is done with Nodejs. The list of web technologies used in this project is below:
 - [React](https://fr.reactjs.org/)
 - [React Router](https://reactrouter.com/)
 - [Mongodb installation](https://www.mongodb.com/try/download/community)
@@ -36,12 +36,18 @@ Documentation for creating routes:
 Creating Database with MongoDB:
   - mongosh
 
+  - show dbs **show all the databases**
+  - show users **show all the users**
+  - db.dropUser("username") **delete a user**
+
+Create database **cacestcool**:
   - use cacestcool
-  - db.user.insert({name: "John Doe", age: 30})
 
-  - show dbs
-
+Create new user for **cacestcool** database:
   - db.createUser({ user: "foo", pwd: "123", roles: [{ role: "dbOwner", db: "cacestcool" }] })
+
+Insert data in **cacestcool** database:
+  - db.cacestcool.insert({name: "John Doe", age: 30})
 
 Installing some necessary packages:
   - npm install express dotenv cors mongoose
@@ -59,6 +65,7 @@ In order to restart the server automatically with any changes in the project fil
   - OR npm install nodemon
   - cd backend
   - nodemon server.js
+  - (It is possible that you need to run the CLi as administrator to run **nodemon** commande)
 
 Axios
   - npm install axios
