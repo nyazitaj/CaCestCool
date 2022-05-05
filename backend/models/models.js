@@ -25,6 +25,10 @@ const toInsert = {
 }
 
 // Creating table in cacesttool database
-const userSchema = mongoose.Schema(/* toInsert */);
+// const userSchema = mongoose.Schema(/* toInsert */);
 
-module.exports = mongoose.model('cacestcool', userSchema);
+// mongoose.model('user', userSchema);
+// module.exports = mongoose.model('post', userSchema);
+
+
+module.exports = mongoose;
