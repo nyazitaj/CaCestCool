@@ -19,10 +19,12 @@ mongoose.connect(
   .then(() => console.log('Connexion à MongoDB réussie !'))
   .catch((e) => console.log(e, 'Connexion à MongoDB échouée !'));
 
-const toInsert = {
-  email: { type: String, required: true, unique: true, index: true },
-  password: { type: String, required: true, minlength: 6, select: false }
-}
+// const toInsert = {
+//   email: { type: String, required: true, unique: true, index: true },
+//   password: { type: String, required: true, minlength: 6, select: false }
+// }
+// const userSchema = mongoose.Schema(toInsert);
+// mongoose.model('taj', toInsert);
 
 // Creating table in cacesttool database
 // const userSchema = mongoose.Schema(/* toInsert */);

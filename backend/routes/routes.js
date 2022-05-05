@@ -1,10 +1,19 @@
 const express = require('express')
-const route = express.Router()
+const app = express()
 
-const controllers = require('../controllers/controllers')
+/* const bodyParser = require('body-parser');
+app.use(bodyParser.urlencoded({ extended: true })); */
+
+const controllers = require('../controllers/controllers');
 
 // All the routes
-route.get('/list-users', controllers.getListUsers)
-route.get('/list-posts', controllers.getListPosts)
+app.get('/users-list', controllers.getListUsers)
+app.get('/posts-list', controllers.getListPosts)
+// app.post('/register-user', controllers.registerUser)
 
-module.exports = route
+app.post('/register-user', (req, res) => {
+    console.log('Got body:', req.body);
+    res.sendStatus(200);
+  })
+
+module.exports = app

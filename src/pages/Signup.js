@@ -8,7 +8,7 @@ function Signup() {
       <div className="title-row">
         <img src="./assets/images/CaCestCool.png" alt="CaCestCool"/>
       </div>
-      <form id="signin">
+      <form id="signup">
         <div className="title-row">
           <h2>Inscription</h2>
         </div>
