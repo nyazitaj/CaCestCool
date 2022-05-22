@@ -17,9 +17,6 @@ The frontend of this project is created using React framework and some other nec
   - [Axios](https://www.npmjs.com/package//axios)
   - [node.bcrypt.js](https://www.npmjs.com/package/bcrypt)
   - [jsonwebtoken](https://www.npmjs.com/package/jsonwebtoken)
-  - []()
-  - []()
-  - []()
 
 
 
