@@ -18,8 +18,9 @@ root.render(
   MyFunctionsObj.SignupUser()
 }) */
 
-window.onload = () => {
-  MyFunctionsObj.SignupUser()
-};
+// Once the page is loaded, we add an event-listner "submit" on the submit form
+// window.onload = () => {
+//   MyFunctionsObj.SignupUser()
+// };
 
 reportWebVitals();

@@ -1,11 +1,12 @@
-import logo from '../logo.svg';
-import '../App.css';
+import '../../App.css';
+import logo from '../../assets/images/CaCestCool.png';
+import { Logo } from '../../classes/Classes';
 
 function App() {
   return (
     <div className="App container">
       <div className="title-row">
-        <img src="./assets/images/CaCestCool.png" alt="CaCestCool"/>
+        <Logo />
       </div>
 
       <div className="title-row">

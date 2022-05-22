@@ -32,7 +32,453 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
+}
+
+/* General */
+body {
+  width: 100%;
+  background-image: url('./assets/images/fond.png');
+  height: 100vh;
+}
+
+.d-none {
+  display: none;
+}
+
+/* Login, Signup, Password recovery, Change password */
+.container.login,
+.container.password-recovery,
+.container.signup {
+  max-width: 430px;
+  margin: auto;
+  padding-top: 150px;
+}
+
+.container.login .logo-row,
+.container.password-recovery .logo-row,
+.container.signup .logo-row {
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+.container.login .logo-row img,
+.container.password-recovery .logo-row img,
+.container.signup .logo-row img {
+  width: 230px;
+}
+
+.container.login form,
+.container.password-recovery form,
+.container.signup form {
+  text-align: center;
+}
+
+.container.login input[type="email"],
+.container.login input[type="password"],
+.container.password-recovery input[type="email"],
+.container.password-recovery input[type="password"],
+.container.signup input[type="email"],
+.container.signup input[type="password"],
+.container.dashboard .column-right input[type="email"],
+.container.dashboard .column-right input[type="text"],
+.container.dashboard .column-right input[type="file"],
+.container.dashboard .column-right input[type="password"],
+.container.dashboard .column-right textarea {
+  border-radius: 20px;
+  padding: 10px 15px;
+  margin-bottom: 30px;
+  width: 85%;
+  font-size: 0.8em;
+  outline: none;
+  border: 2px solid white;
+  transition: .2s all;
+}
+
+.container.login input[type="email"]::placeholder,
+.container.login input[type="password"]::placeholder,
+.container.password-recovery input[type="email"]::placeholder,
+.container.password-recovery input[type="password"]::placeholder,
+.container.signup input[type="email"]::placeholder,
+.container.signup input[type="password"]::placeholder,
+.container.dashboard .column-right input[type="email"]::placeholder,
+.container.dashboard .column-right input[type="text"]::placeholder,
+.container.dashboard .column-right input[type="password"]::placeholder {
+  color: silver;
+}
+
+.container.dashboard .column-right textarea {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+}
+
+.container.dashboard .column-right textarea::placeholder {
+  color: silver;
+  font-size: 1em;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+}
+
+.container.login input[type="email"]:focus,
+.container.login input[type="password"]:focus,
+.container.password-recovery input[type="email"]:focus,
+.container.password-recovery input[type="password"]:focus,
+.container.signup input[type="email"]:focus,
+.container.signup input[type="password"]:focus,
+.container.dashboard .column-right input[type="email"]:focus,
+.container.dashboard .column-right input[type="text"]:focus,
+.container.dashboard .column-right input[type="password"]:focus,
+.container.dashboard .column-right textarea:focus {
+  border-color: #0085FF;
+}
+
+.container.login button,
+.container.password-recovery button,
+.container.signup button,
+.container.dashboard .column-right button {
+  border: none;
+  border-radius: 20px;
+  padding: 10px 25px;
+  margin-bottom: 15px;
+  background: #0085FF;
+  color: white;
+  font-size: 0.8em;
+  font-weight: bold;
+  cursor: pointer;
+  transition: .2s all;
+}
+
+.container.login button:hover,
+.container.password-recovery button:hover,
+.container.signup button:hover,
+.container.dashboard .column-right button:hover {
+  background: #0068c7;
+}
+
+.input-row input[type="file"] {
+  display: none;
+}
+
+.input-row .custom-file-upload {
+  display: inline-block;
+  cursor: pointer;
+  border-radius: 20px;
+  padding: 10px 25px;
+  margin-bottom: 20px;
+  color: #838383;
+  font-size: 0.8em;
+  font-weight: bold;
+  border: 1px solid white;
+}
+
+.container.login a,
+.container.password-recovery a,
+.container.signup a {
+  font-size: 0.8em;
+  color: #0085FF;
+  text-decoration: none;
+}
+
+.container.login .alert-row,
+.container.password-recovery .alert-row,
+.container.signup .alert-row,
+.container.dashboard .column-right .alert-row {
+  font-size: 0.8em;
+}
+
+/* Dashboard */
+.container.dashboard .column-left {
+  width: 300px;
+  background: linear-gradient(180deg, #D5EBFF 0%, #E2E9EF 100%);
+  position: fixed;
+  height: 100%;
+}
+
+.container.dashboard .column-right {
+  margin-left: 300px;
+  padding-left: 30px;
+}
+
+.container.dashboard .column-left .logo-row {
+  text-align: center;
+  padding: 50px 0 15px;
+}
+
+.container.dashboard .column-left .logo-row img {
+  width: 110px;
+}
+
+.container.dashboard .column-left .profile-image-row {
+  text-align: center;
+}
+
+.container.dashboard .column-left .profile-image-row img {
+  width: 150px;
+  height: 150px;
+  margin: auto;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 5px solid white;
+}
+
+.container.dashboard .column-left .name-row {
+  padding: 15px 10px;
+  background: rgba(237, 237, 237, 0.37);
+  text-align: center;
+  margin-top: 8px;
+}
+
+.container.dashboard .column-left .name-row h2 {
+  margin: 0;
+  font-size: 1.2em;
+}
+
+.accordion-row {
+  padding-top: 20px;
+}
+
+.accordion-row div {
+  padding: 10px 0 10px 0;
+  margin-top: 8px;
+  font-size: 1.2em;
+  cursor: pointer;
+  border-bottom: 1px solid rgba(192, 192, 192, 0);
+  transition: .2s all;
+  width: 75%;
+  margin-left: 20px;
+}
+
+.accordion-row div:hover {
+  border-bottom: 1px solid silver;
+}
+
+.accordion-row div.current {
+  font-weight: bold;
+}
+
+.container.dashboard .column-right ul,
+.container.dashboard .column-right h2 {
+  margin: 0;
+}
+
+/* Dashboard */
+.container.dashboard .column-right {
+  margin-left: 300px;
+}
+
+.container.dashboard .column-right div.column-right-inner {
+  display: flex;
+}
+
+.container.dashboard .column-right .title-container {
+  padding: 0 0 25px;
+  border-bottom: 1px solid #DDDDDD;
+  margin-bottom: 41px;
+}
+
+.container.dashboard .column-right .title-container h2 {
+  font-family: monospace;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 100.52%;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #838383;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.container.dashboard .column-right .title-container {
+  position: relative;
+}
+
+.container.dashboard .column-right .title-container button {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+/* Posts list */
+.container.dashboard .column-right .post-list-container {
+  margin: 30px 0;
+  filter: drop-shadow(0px 10px 20px rgba(0, 0, 0, 0.1));
+}
+
+.container.dashboard .column-right .post-list-container .post-row {
+  background: #FFFFFF;
+  border-radius: 30px;
+  position: relative;
+  height: 110px;
+}
+
+.container.dashboard .column-right .post-list-container .post-row .post-col-image {
+  width: 100px;
+  text-align: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.container.dashboard .column-right .post-list-container .post-row .post-col-image img {
+  margin-top: 20px;
+}
+
+.container.dashboard .column-right .post-list-container .post-row .post-col-text {
+  margin-left: 100px;
+}
+
+.container.dashboard .column-right .post-list-container .post-row .post-col-text h2 {
+  font-size: 1em;
+  padding: 10px 0 0;
+}
+
+.container.dashboard .column-right .post-list-container .post-row .post-col-text p {
+  font-size: 0.85em;
+  margin: 7px 0 0px;
+  padding-right: 20px;
+}
+
+.container.dashboard .column-right .post-list-container .post-row .post-icons {
+  padding: 15px 0 7px;
+  display: flex;
+  justify-content: space-between;
+  bottom: 0;
+  position: absolute;
+  width: 80%;
+}
+
+.container.dashboard .column-right .post-list-container .post-row .post-icons img:nth-child(1) {
+  width: 14px;
+  height: 14px;
+  cursor: pointer;
+}
+
+.container.dashboard .column-right .post-list-container .post-row .post-icons img:nth-child(2) {
+  width: 18px;
+  height: 16px;
+  margin-right: 35px;
+  cursor: pointer;
+}
+
+.container.dashboard .column-right .post-list-container .post-row .post-col-text span.see-full-post {
+  font-weight: 500;
+  text-decoration: underline;
+  cursor: pointer;
+  color: #0085ff;
+}
+
+.container.dashboard .column-right .post-list,
+.container.dashboard .column-right .my-account,
+.container.dashboard .column-right .change-password {
+  max-width: 460px;
+  width: 100%;
+  padding: 100px 30px 0;
+}
+
+.container.dashboard .column-right form {
+  max-width: 510px;
+}
+
+/* Post view */
+.container.dashboard .column-right .post-view .comments-row {
+  display: inline-block;
+}
+
+.container.dashboard .column-right .post-view .image-row img {
+  width: 100%;
+}
+
+.container.dashboard .column-right .post-view {
+  width: 100%;
+  background: white;
+  margin: 0 50px;
+  padding: 60px;
+}
+
+.container.dashboard .column-right .post-view .date-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 15px;
+}
+
+.container.dashboard .column-right .post-view .date-row span {
+  background: #444444;
+  border-radius: 30px;
+  color: white;
+  padding: 9px 15px;
+  font-size: 0.7em;
+}
+
+.container.dashboard .column-right .post-view .post-list-container {
+  margin: 35px 0;
+}
+
+.container.dashboard .column-right .post-view .title-row {
+  border-bottom: 1px solid #DDDDDD;
+  margin-bottom: 41px;
+}
+
+.container.dashboard .column-right .post-view .title-row h3 {
+  margin: 0;
+}
+
+.container.dashboard .column-right .post-view .title-row p {
+  font-size: 0.8em;
+  margin: 3px 0;
+}
+
+.container.dashboard .column-right .post-view .title-row p:nth-child(2) {
+  color: #0085FF;
+}
+
+.container.dashboard div.column-right-inner .post-view .post-row {
+  background-color: transparent;
+  display: initial;
+}
+
+.container.dashboard .column-right .post-view .post-row img {
+  margin-top: 0 !important;
+}
+
+.container.dashboard div.column-right-inner .post-view .post-col-text {
+  background: #DEDEDE;
+  border-radius: 30px;
+  padding: 5px 15px 20px;
+  min-height: 100px;
+}
+
+.container.dashboard .column-right .post-view .post-row p {
+  font-size: 0.7em;
+  margin: 3px 0;
+}
+
+/* Comments */
+.container.dashboard .column-right .post-view .new-comment-row textarea {
+  margin-bottom: 5px;
+  background: #F8F8F8;
+}
+
+.container.dashboard .column-right .post-view .new-comment-row {
+  margin-top: 20px;
+  text-align: right;
+}
+
+.container.dashboard .column-right .post-view .new-comment-row form {
+  max-width: initial;
+}
+
+.container.dashboard .column-right .post-view .new-comment-row button {
+  color: #0085FF;
+  background: #0085ff00;
+}
+
+.container.dashboard .column-right .post-view .new-comment-row button img {
+  margin-left: 7px;
 }
