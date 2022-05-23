@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import Signin from '../component/login/Login';
 import Signup from '../component/signup/Signup';
 import ForgotPassword from "../component/passwordrecovery/PassRecovery";
@@ -9,28 +9,36 @@ export default function MyRoutes() {
   return (
     <BrowserRouter>
       <Routes>
-        {
-          /* localStorage.getItem('token') != undefined && localStorage.getItem('token') != '' ?
-            <Route path="/" element={<Dashboard />} /> : */
-            <Route path="/" element={<Signin />} />
-        }
 
-        {
-          /* localStorage.getItem('token') != undefined && localStorage.getItem('token') != '' ?
-            <Route path="/signup" element={<Dashboard />} /> : */
-            <Route path="/signup" element={<Signup />} />
-        }
+      <Route exact path="/" element={
+        localStorage.getItem('token') == undefined || localStorage.getItem('token') == '' ? <Signin /> : <Navigate to="/dashboard" />
+      }
+      >
+        <Route exact path="/" element={<Signin />} />
+      </Route>
 
-        <Route path="/forgot-password" element={<ForgotPassword />} />
+      <Route exact path="/signup" element={
+        localStorage.getItem('token') == undefined || localStorage.getItem('token') == '' ? <Signup /> : <Navigate to="/dashboard" />
+      }
+      >
+        <Route exact path="/signup" element={<Signup />} />
+      </Route>
 
-        {
-          /* localStorage.getItem('token') != undefined && localStorage.getItem('token') != '' ? */
-            <Route path="/dashboard" element={<Dashboard />} /> /* :
-            <Route path="/dashboard" element={<Signin />} /> */
-        }
+      <Route exact path="/forgot-password" element={
+        localStorage.getItem('token') == undefined || localStorage.getItem('token') == '' ? <ForgotPassword /> : <Navigate to="/dashboard" />
+      }
+      >
+        <Route exact path="/forgot-password" element={<ForgotPassword />} />
+      </Route>
 
-        <Route path="*" element={<Nopage />} />
-      </Routes>
-    </BrowserRouter>
+      <Route exact path="/dashboard" element={
+        localStorage.getItem('token') != undefined && localStorage.getItem('token') != '' ? <Dashboard /> : <Navigate to="/" />
+      }
+      >
+        <Route exact path="/dashboard" element={<Dashboard />} />
+      </Route>
+
+    </Routes>
+    </BrowserRouter >
   );
 }

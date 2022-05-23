@@ -2,7 +2,8 @@ const dbMongoCon = require('../models/models');
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 const collectionPost = require('../services/posts')
-const collectionUsers = require('../services/users')
+const collectionUsers = require('../services/users');
+const collectionLike = require('../services/like');
 
 
 
@@ -10,14 +11,39 @@ const collectionUsers = require('../services/users')
 
 // Display posts list
 exports.getPostsList = (req, res) => {
+    let postsArray = []
 
     collectionPost.find({}).then((posts) => {
 
-        res.status(200).json(
-            posts = posts.reverse()
-        )
+        collectionLike.find({}).then((likes) => {
 
-    });
+            posts.forEach((post) => {
+                let postsObj = {}
+
+                postsObj._id = post._id
+                postsObj.userid = post.userid
+                postsObj.content = post.content
+                postsObj.title = post.title
+                postsObj.createdat = post.createdat.toLocaleString("fr-FR")
+
+                let ctLike = 0
+                likes.forEach((like) => {
+                    if (like.postid == post._id) {
+                        ctLike += 1
+                    }
+                });
+
+                postsObj.likes = ctLike
+
+                postsArray.push(postsObj)
+            });
+
+            res.status(200).json(
+                postsArray = postsArray.reverse()
+            )
+        })
+
+    })
 
 }
 
@@ -55,12 +81,41 @@ exports.addPost = (req, res) => {
 
 // Get posts list by user id
 exports.postsListByUserId = (req, res) => {
+    let postsArray = []
 
     collectionPost.find({ userid: req.body.userid }).then((posts) => {
 
-        res.status(200).json(
-            posts = posts.reverse()
-        )
+        collectionLike.find({}).then((likes) => {
+
+            posts.forEach((post) => {
+                let postsObj = {}
+
+                postsObj._id = post._id
+                postsObj.userid = post.userid
+                postsObj.content = post.content
+                postsObj.title = post.title
+                postsObj.createdat = post.createdat.toLocaleString("fr-FR")
+
+                let ctLike = 0
+                likes.forEach((like) => {
+                    if (like.postid == post._id) {
+                        ctLike += 1
+                    }
+                });
+
+                postsObj.likes = ctLike
+
+                postsArray.push(postsObj)
+            });
+
+            res.status(200).json(
+                postsArray = postsArray.reverse()
+            )
+        })
+
+        // res.status(200).json(
+        //     posts = posts.reverse()
+        // )
 
     });
 }

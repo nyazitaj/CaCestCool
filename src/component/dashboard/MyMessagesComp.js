@@ -31,6 +31,8 @@ function MyMessages(props) {
             .then(function (res) {
                 if (res.status == 200) {
                     setPostList(res.data)
+
+                    console.log(res.data)
                 }
                 else {
                     console.log("La requête a échoué")
@@ -42,6 +44,7 @@ function MyMessages(props) {
 
         firstTimeLodading = false;
     }
+
 
     useEffect(() => {
         if (firstTimeLodading) {
@@ -242,10 +245,10 @@ function MyMessages(props) {
                                             <h2>{val.title.length > 30 ? val.title.substring(0, 35) + ' ...' : val.title}</h2>
                                             <p>{val.content.length > 30 ? val.content.substring(0, 80) + ' ...' : val.content} <span className="see-full-post" post-id={val._id} onClick={getOnePostById}>Voir le post</span></p>
                                         </div>
-                                        <div className="post-icons">
-                                            <img src={btnComment} atl="Profile image" with="25" height="25" />
-                                            <img src={btnLike} atl="Profile image" with="25" height="25" post-id={val._id} onClick={addLike} />
-                                        </div>
+                                    </div>
+                                    <div className="post-icons">
+                                        {/* <span comment-id={val._id}>{val.likes} <img src={btnComment} atl="Comments" with="25" height="25" /></span> */}
+                                        <span post-id={val._id} className={val.userid != localStorage.getItem('id') ? 'clickable' : ''} onClick={addLike}>{val.likes} <img src={btnLike} atl="Like" with="25" height="25" post-id={val._id} onClick={addLike} /></span>
                                     </div>
                                 </div>
                             </div>

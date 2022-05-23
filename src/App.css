@@ -314,7 +314,7 @@ body {
   background: #FFFFFF;
   border-radius: 30px;
   position: relative;
-  height: 110px;
+  min-height: 110px;
 }
 
 .container.dashboard .column-right .post-list-container .post-row .post-col-image {
@@ -348,22 +348,27 @@ body {
   padding: 15px 0 7px;
   display: flex;
   justify-content: space-between;
-  bottom: 0;
-  position: absolute;
-  width: 80%;
+  margin: 0 0 0 100px;
 }
 
-.container.dashboard .column-right .post-list-container .post-row .post-icons img:nth-child(1) {
+.container.dashboard .column-right .post-list-container .post-row .post-icons span:nth-child(1) img {
   width: 14px;
   height: 14px;
-  cursor: pointer;
 }
 
-.container.dashboard .column-right .post-list-container .post-row .post-icons img:nth-child(2) {
+.container.dashboard .column-right .post-list-container .post-row .post-icons span:nth-child(2) img {
   width: 18px;
   height: 16px;
   margin-right: 35px;
+  filter: opacity(0.2);
+}
+
+.container.dashboard .column-right .post-list-container .post-row .post-icons .clickable {
   cursor: pointer;
+}
+.container.dashboard .column-right .post-list-container .post-row .post-icons .clickable img {
+  cursor: pointer;
+  filter: opacity(1) !important;
 }
 
 .container.dashboard .column-right .post-list-container .post-row .post-col-text span.see-full-post {
@@ -388,6 +393,7 @@ body {
 /* Post view */
 .container.dashboard .column-right .post-view .comments-row {
   display: inline-block;
+  width: 100%;
 }
 
 .container.dashboard .column-right .post-view .image-row img {

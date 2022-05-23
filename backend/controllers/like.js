@@ -22,17 +22,24 @@ exports.addLike = (req, res) => {
             }
             else {
 
-                // Insert post data in database
-                collectionLike.insertMany(req.body, (err, like) => {
-                    if (err) {
-                        res.status(200).json(err)
-                    }
-                    else {
-                        res.status(200).json({
-                            message: 'Un like a été ajouté.'
+                collectionLike.find({ postid: req.body.postid }).then((likes) => {
+
+                    if (likes.length == 0 && likes.userid != req.body.userid) {
+                        // Insert post data in database
+                        collectionLike.insertMany(req.body, (err, like) => {
+                            if (err) {
+                                res.status(200).json(err)
+                            }
+                            else {
+                                res.status(200).json({
+                                    message: 'Un like a été ajouté.'
+                                })
+                            }
                         })
                     }
+
                 })
+
             }
         }
 

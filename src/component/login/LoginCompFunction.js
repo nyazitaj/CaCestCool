@@ -57,6 +57,7 @@ function LoginForm() {
 
                     localStorage.setItem('id', res.data.id)
                     localStorage.setItem('token', res.data.token)
+                    window.location.reload();
                     navigate("../dashboard", { replace: true });
                 }
                 else {

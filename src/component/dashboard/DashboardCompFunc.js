@@ -71,6 +71,7 @@ function DashboardComponent() {
 
                     if (res.data.message && res.data.message == 'ok') {
                         localStorage.clear();
+                        window.location.reload();
                         navigate("/", { replace: true });
                     }
                 }
@@ -110,8 +111,8 @@ function DashboardComponent() {
                         <h2>{prenom} {nom}</h2>
                     </div>
                     <div id="accordion-row"className="accordion-row">
-                        <div onClick={addRemoveClass} my-attr="my-wall" className="current">Mon mur<span title="12 nouveauxx posts depuis votre dernière visite">12</span></div>
-                        <div onClick={addRemoveClass} my-attr="my-message">Mes messages<span title="3 nouveauxx commentaires sur vos dernière posts">3</span></div>
+                        <div onClick={addRemoveClass} my-attr="my-wall" className="current">Mon mur{/* <span title="12 nouveauxx posts depuis votre dernière visite">12</span> */}</div>
+                        <div onClick={addRemoveClass} my-attr="my-message">Mes messages{/* <span title="3 nouveauxx commentaires sur vos dernière posts">3</span> */}</div>
                         <div onClick={addRemoveClass} my-attr="my-account">Mon compte</div>
                         <div onClick={addRemoveClass} my-attr="change-pass">Mot de passe</div>
                         <div onClick={logoutUser}>Déconnexion</div>

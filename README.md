@@ -6,6 +6,26 @@ CaCestCool est a web training school project created by [Taj Nyazi](https://estr
 
 ## CaCestCool
 
+
+Les objectifs à atteindre :
+
+  - Requêter les données requises **DONE**
+  - Soumettre des changements (Création, suppression et modification) **DONE**
+  - Se connecter et se déconnecter de l’application **DONE**
+  - Afficher l'ensemble des posts de CaCestCool **DONE**
+  - Afficher l'ensemble de mes posts **DONE**
+  - Commenter tous les posts **DONE**
+  - Aimer des posts **DONE**
+    - pas les siens **DONE**
+  - Ne pas pouvoir être redirigé vers la page de connexion si déjà connecté **DONE**
+    - et donc me faire redirigé vers une page d'accueil **DONE**
+  - Modifier les informations de mon profil  **DONE**
+  - Changer son mot de passe  **DONE**
+  - Uploader une image dans un post
+  - Uploader une image de profil
+
+# React Project
+
 The frontend of this project is created using React framework and some other necessary features of React, while backend is done with Nodejs. The list of web technologies used in this project is below:
   - [React](https://fr.reactjs.org/)
   - [React Router](https://reactrouter.com/)
@@ -17,28 +37,6 @@ The frontend of this project is created using React framework and some other nec
   - [Axios](https://www.npmjs.com/package//axios)
   - [node.bcrypt.js](https://www.npmjs.com/package/bcrypt)
   - [jsonwebtoken](https://www.npmjs.com/package/jsonwebtoken)
-
-
-
-
-# React Project
-
-Les objectifs à atteindre :
-
-  - Requêter les données requises
-  - Soumettre des changements (Création, suppression et modification)
-  - Se connecter et se déconnecter de l’application **DONE**
-  - Afficher l'ensemble des posts de CaCestCool
-  - Afficher l'ensemble de mes posts
-  - Commenter tous les posts
-  - Aimer des posts
-    - pas les siens
-  - Ne pas pouvoir être redirigé vers la page de connexion si déjà connecté **DONE**
-    - et donc me faire redirigé vers une page d'accueil
-  - Modifier les informations de mon profil  **DONE**
-  - Changer son mot de passe  **DONE**
-  - Uploader une image dans un post
-  - Uploader une image de profil **DONE**
 
 ## frontend
 
