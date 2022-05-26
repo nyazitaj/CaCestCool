@@ -38,6 +38,8 @@ export default function MyRoutes() {
         <Route exact path="/dashboard" element={<Dashboard />} />
       </Route>
 
+      <Route path="*" element={<Nopage />} />
+
     </Routes>
     </BrowserRouter >
   );
